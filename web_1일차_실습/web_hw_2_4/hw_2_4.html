@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 자손 결합자 : div 내부의 모든 하위 p 태그 적용 */
+    div p {
+      color: blue;
+    }
+
+    /* 자식 결합자 : div 바로 직계 자식인 p 태그에만 적용 */
+    div > p {
+      color: crimson;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- 자식 결합자는 바로 직계 자식인 요소만 선택한다. 
+  손/자식 결합자의 명시도는 같아 나중에 선언된 자식 결합자가 
+  선언되어 div 한 단계 아래 있는 태그에 빨간색이 적용된다. -->
+  <div>
+    <p>자식</p>
+    <span>
+      <p>손자</p>
+    </span>
+    <p>자식</p>
+  </div>
+  
+</body>
+</html>

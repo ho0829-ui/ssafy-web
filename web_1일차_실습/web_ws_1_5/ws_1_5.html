@@ -1,0 +1,127 @@
+<!-- 제공된 예시 화면과 스켈레톤 코드를 바탕으로, HTML 구조를 재현하는 실습을 수행한다.
+Block 요소(div, p, h1~h6, ul, li 등)와 Inline 요소(span, img, a, strong, em 등)의 쓰임을 구분하여 적절히 활용한다.
+텍스트 강조, 링크 연결, 이미지 삽입 등 시맨틱한 HTML 마크업을 작성한다.
+CSS 작성 없이 HTML 태그만으로 구조와 의미를 구현하는 연습을 통해 시멘틱 마크업 능력을 향상시킨다. -->
+
+<!-- 문단, 제목, 줄 나눔, 구획 등은 Block 요소를 사용하여 작성한다.
+링크, 이미지, 텍스트 강조 등은 Inline 요소를 사용하여 구성한다.
+다음 내용을 포함하도록 HTML을 구성한다:
+- 상단 SSAFY 로고 이미지와 설명 텍스트
+- 강조된 문장(굵게, 줄바꿈 포함)
+- 프로그램 설명 문단
+- 주관, 후원, 위탁 정보를 포함한 텍스트
+- 가로줄(hr)을 활용한 구분선
+- 3개의 이모지 이미지 + 텍스트 구성 목록 (ul 사용) -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    .img-container {
+      display: flex;
+      flex-direction: column;
+      margin-left: 5px;
+      
+    }
+    .img-size {
+      width: 150px;
+      height: 90px;
+    }
+    div {
+      margin-left: 5px;
+    }
+    .contents {
+      font-size: 20px;
+    }
+    hr {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+    .clean-span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .banner-size {
+      width: 200px;
+      height: 50px;
+    }
+    .feature-container {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      line-height: 1;
+    }
+    .col {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .feature-item {
+      margin: 0;
+      line-height: 1;
+    }
+    .array-img {
+      width: 150px;
+      height: 150px;
+    }
+    
+  </style>
+</head>
+<body>
+  <span class="img-container">
+    <img src="./images/ssafy_logo.png" alt="SSAFY Logo" class="img-size">
+    <img src="./images/ssafy_banner.png" alt="SSAFY Banner" class="img-size">
+  </span>
+  <div>
+    <p class="content">
+      삼성청년 SW아카데미<br>
+      <strong>대한민국 SW의 미래</strong>를 이끕니다.
+    </p>
+  </div>
+  <div>
+    <p class="content">
+      <strong>삼성의 SW 교육 경험과 고용노동부의 취업 지원 노하우를 바탕으로, 취업 준비생에게 SW역량 향상 교육 및 다양한 취업 지원 서비스를 제공하여 취업에 성공하도록 돕는 프로그램입니다</strong>
+    </p>
+  </div>
+  <div>
+    <p class="content">
+      본 교육과정은 삼성이 주관하고 고용노동부가 후원하며, 아이들과 미래재단이 함께합니다.<br>
+      (교육 운영은 멀티캠퍼스에서 위탁 실시)
+    </p>
+  </div>
+  <hr>
+  <div>
+    <span class="clean-span">
+      <strong class="contents">주관</strong>
+      <img src="./images/multicampus_logo.png" alt="멀티캠퍼스" class="banner-size">
+      <strong class="contents">후원</strong>
+      <img src="./images/mob_logo_moel.png" alt="고용노동부" class="banner-size">
+    </span>
+  </div>
+  <div class="col">
+    <span class="feature-container">
+      <img src="./images/happling.png" alt="씨앗" class="array-img">
+      <strong class="feature-item">최고의 교육</strong>
+    </span>
+    <span class="feature-container">
+      <img src="./images/happlossom.png" alt="꽃봉오리" class="array-img">
+      <strong class="feature-item">맞춤형 교육</strong>
+    </span>
+    <span class="feature-container">
+      <img src="./images/happlower.png" alt="꽃" class="array-img">
+      <strong class="feature-item">자기주도적 학습</strong>
+    </span>
+  </div>
+</body>
+</html>
